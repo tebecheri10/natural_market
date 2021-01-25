@@ -1,0 +1,28 @@
+$width: 100%;
+$height: 300px;
+$background-green:rgba(0, 166, 53, 0.2);
+$padding: 20px;
+$font-size: 30px;
+
+.contenedor-envios--general {
+
+    width: $width/1.5;
+    height: $height;
+    background: $background-green;
+    margin: auto;
+    text-align: center;
+
+    h2{
+        font-size: $font-size;
+        padding: $padding;
+    }
+
+    p{
+
+        padding: $padding;
+        font-size: $font-size - 16;
+    
+    }
+
+
+}

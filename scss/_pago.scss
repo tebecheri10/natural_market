@@ -1,0 +1,9 @@
+.contenedor-pago--general {
+
+    @extend .contenedor-envios--general;
+    margin-top: 20px;
+
+    ul{ 
+    list-style: none;
+    }
+}
