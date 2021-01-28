@@ -24,7 +24,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold; }
 
 /*------------- barra nav-------------*/
@@ -32,12 +32,13 @@ header {
   background: #00a635;
   background: linear-gradient(0deg, #00a635 0%, #00e486 100%);
   width: 100%;
-  height: 60px;
+  height: 61px;
   align-items: center;
   text-align: center;
   position: fixed;
   z-index: 1;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border-bottom: 1px solid pink; }
 
 .navContainerContacto {
   background: #00a635;
@@ -45,11 +46,12 @@ header {
   width: 100%;
   height: 60px;
   align-items: center;
-  border-bottom: 1px solid pink;
   padding: 30px;
   position: fixed;
   font-weight: bold;
-  z-index: 2; }
+  z-index: 2;
+  transform: translateX(-60px);
+  border-bottom: 1px solid pink; }
 
 .mainNavContacto {
   display: flex;
@@ -75,10 +77,10 @@ header {
   padding: 20px; }
 
 .logoContacto img {
-  height: 50px;
-  width: 160px;
-  transform: translatex(-20px);
-  margin-bottom: 10px; }
+  height: 42px;
+  width: 200px;
+  transform: translatex(30px);
+  margin-bottom: 8px; }
 
 .iconsContacto {
   color: white;
@@ -128,7 +130,7 @@ a {
 .contenedorMain {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/main4.jpg);
+  background-image: url(../images/main.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,7 +151,7 @@ a {
 .contenedorMain p {
   padding: 0px;
   line-height: 70px;
-  font-size: 20px; }
+  font-size: 30px; }
 
 /*-------------Testimonios-------------*/
 .contenedorTestimonios {
@@ -240,7 +242,7 @@ a {
   width: 100%;
   height: 350px;
   margin-top: 200px;
-  background-image: url(../images/banner2.jpg);
+  background-image: url(../images/banner.jpg);
   background-size: cover;
   color: white;
   text-shadow: -2px -2px 6px rgba(0, 0, 0, 0.93); }
@@ -252,7 +254,7 @@ a {
 .contenedorBanner p {
   line-height: 40px;
   font-size: 20px;
-  font-family: 'Mulish', sans-serif; }
+  font-family: "Mulish", sans-serif; }
 
 .botonSuscripcion {
   height: 45px;
@@ -356,7 +358,7 @@ a {
   text-shadow: 2px 2px 5px #000000;
   text-align: center;
   line-height: 140px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   padding: 40px;
   background-attachment: fixed; }
 
@@ -467,7 +469,7 @@ a {
   text-shadow: 2px 2px 5px #000000;
   text-align: center;
   line-height: 140px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   padding: 80px;
   background-attachment: fixed; }
 
@@ -533,7 +535,7 @@ a {
   color: white;
   text-shadow: 2px 2px 5px #000000;
   text-align: center;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   padding: 80px;
   background-attachment: fixed; }
 
@@ -665,21 +667,23 @@ a {
   border-radius: 5px; }
 
 /*----------------------------------------------------------------------------------*/
-/*                                  media query                                     */
+/*                                  media query   max width 375px-                  */
 /*----------------------------------------------------------------------------------*/
 /*----------------general----------*/
-@media (max-width: 576px) {
+@media (max-width: 375px) {
   header {
     width: 100%; }
   #check {
     display: none; }
   .menuBtn {
-    display: block; }
+    display: block;
+    left: 68px; }
   .logoContacto img {
     height: 45px;
-    width: 160px;
-    transform: translatex(10px);
-    margin-bottom: 10px; }
+    width: 300px;
+    transform: translatex(100px);
+    margin-bottom: 10px;
+    margin-left: 120px; }
   .footer {
     margin-top: 50px;
     margin-bottom: 0;
@@ -687,11 +691,29 @@ a {
     height: 1200px;
     background: #446949;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 400px 400px 400px;
     column-gap: 200px;
     padding: 40px;
     font-size: 13px; }
+  .footerContacto {
+    width: 90%;
+    margin: auto; }
+  .footerContacto ul {
+    width: 100%;
+    margin: auto; }
+  .footerSecciones {
+    width: 90%;
+    margin: auto; }
+  .footerSecciones ul {
+    width: 100%;
+    margin: auto; }
+  .footerMediosDePago {
+    width: 90%;
+    margin: auto; }
+  .footerMediosDePago ul {
+    width: 100%;
+    margin: auto; }
   .iconsContacto {
     display: none; }
   /*--------------menu-responsive----------------------------*/
@@ -754,6 +776,10 @@ a {
     margin: auto;
     padding: 15px; }
   /*--------------TESTIMONIOS----------------------------*/
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center; }
   .tituloTestimonios {
     font-size: 30px;
     padding: 20px; }
@@ -957,3 +983,681 @@ a {
     font-size: 20px; }
   .carousel-caption {
     background: rgba(0, 166, 53, 0.425); } }
+
+/*----------------------------------------------------------------------------------*/
+/*-----------------------media query iphone plus------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media (max-width: 414px) {
+  header {
+    width: 100%; }
+  #check {
+    display: none; }
+  .menuBtn {
+    display: block;
+    left: 68px; }
+  .logoContacto img {
+    height: 45px;
+    width: 220px;
+    transform: translatex(10px);
+    margin-bottom: 10px;
+    margin-left: 108px; }
+  .footer {
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 1200px;
+    background: #446949;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 400px 400px;
+    column-gap: 200px;
+    padding: 40px;
+    font-size: 13px; }
+  .footerContacto {
+    width: 90%;
+    margin: auto; }
+  .footerSecciones {
+    width: 90%;
+    margin: auto; }
+  .footerMediosDePago {
+    width: 90%;
+    margin: auto; }
+  .iconsContacto {
+    display: none; }
+  /*--------------menu-responsive----------------------------*/
+  .navContainerContacto {
+    width: 100%; }
+  .mainNavContacto {
+    width: 100%; }
+  .menuContainerContacto ul {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 42px;
+    left: -100%;
+    background: rgba(85, 90, 87, 0.85);
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 20px; }
+  .menuContainerContacto ul li {
+    display: block; }
+  .menuContainerContacto ul li a {
+    margin-right: 35px;
+    text-transform: capitalize; }
+  .menuContainerContacto ul li a:hover {
+    margin-right: 35px;
+    text-transform: capitalize;
+    color: rgba(85, 90, 87, 0.6); }
+  #check:checked ~ ul {
+    left: 60px; }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  INDEX                                          */
+  /*---------------------------------------------------------------------------------*/
+  /*--------------BENEFICIOS----------------------------*/
+  .contenedorSuscripcion {
+    width: 90%;
+    height: 1000px;
+    margin: auto; }
+  .listaBeneficios {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; }
+  .beneficioDescuentos {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px; }
+  .beneficioMensajes {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px; }
+  .beneficioEnvios {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 15px; }
+  /*--------------TESTIMONIOS----------------------------*/
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center; }
+  .tituloTestimonios {
+    font-size: 30px;
+    padding: 20px; }
+  .card-body {
+    text-align: center; }
+    .card-body h3 {
+      font-size: 30px; }
+  /*--------------BANNER----------------------------*/
+  .contenedorBanner {
+    margin-top: 70px;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .textoBanner {
+    padding: 10px; }
+    .textoBanner p {
+      margin-top: 40px; }
+  .botonSuscripcion {
+    transform: translateX(85px);
+    padding-left: 11px;
+    width: 150px;
+    border-radius: 7px;
+    background: linear-gradient(0deg, #00a635 0%, #00e486 100%); }
+    .botonSuscripcion a {
+      color: white; }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  PRODUCTOS                                      */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorBienvenida p {
+    font-size: 20px;
+    line-height: 30px; }
+  .galeria {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .galeria div {
+    width: 90%;
+    height: 90%;
+    margin: auto; }
+  .banner2 {
+    font-size: 15px;
+    padding: 30px;
+    margin-bottom: 50px; }
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline; }
+  .contenedor-envios--general, .contenedor-devoluciones--general, .contenedor-pago--general {
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px; }
+  .contenedor-devoluciones--general {
+    height: 320px; }
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px; }
+  .contenedor-pago--general p {
+    padding: 0 30px; }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  recursos                                        */
+  /*----------------------------------------------------------------------------------*/
+  .titulo-pagina--tamaño {
+    padding: 55px; }
+  .receta-uno--tamaño {
+    height: 1850px;
+    width: 100%;
+    margin: auto; }
+  .receta-uno__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px; }
+  .receta-uno__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column; }
+  .receta-uno__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px; }
+  .receta-uno__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px; }
+  .receta-uno__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px; }
+  .primer-articulo__parrafo {
+    font-size: 20px; }
+  /*-------------------RECETA 2------------------------------------------*/
+  .separador h2 {
+    font-size: 40px;
+    transform: translateY(-30px); }
+  .receta-dos--tamaño {
+    height: 1300px;
+    width: 100%;
+    margin: auto; }
+  .receta-dos__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px; }
+  .receta-dos__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column; }
+  .receta-dos__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px; }
+  .receta-dos__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px; }
+  .receta-dos__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px; }
+  .segundo-articulo__parrafo {
+    font-size: 20px; }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  nosotros                                        */
+  /*----------------------------------------------------------------------------------*/
+  .primer-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px; }
+  .primer-articulo--arriba {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .primer-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 40%;
+    padding: 20px; }
+  .primer-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(200px); }
+  /*-------segundo articulo-----*/
+  .segundo-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px; }
+  .segundo-articulo--abajo {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .segundo-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 50%;
+    padding: 20px; }
+  .segundo-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(240px); }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  CONTACTO                                       */
+  /*---------------------------------------------------------------------------------*/
+  .containerCarousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center; }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    font-size: 20px; }
+  .carousel-caption {
+    background: rgba(0, 166, 53, 0.425); } }
+
+/*----------------------------------------------------------------------------------*/
+/*                                  media query 320px                               */
+/*----------------------------------------------------------------------------------*/
+@media (max-width: 320px) {
+  header {
+    width: 100%; }
+  #check {
+    display: none; }
+  .menuBtn {
+    display: block; }
+  .logoContacto img {
+    height: 45px;
+    width: 200px;
+    transform: translatex(30px);
+    margin-bottom: 10px;
+    margin-left: 60px; }
+  .footer {
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 1200px;
+    background: #446949;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 400px 400px;
+    column-gap: 200px;
+    padding: 40px;
+    font-size: 13px; }
+  .footerContacto {
+    width: 100%;
+    margin: auto; }
+  .footerContacto ul {
+    width: 100%;
+    margin: auto; }
+  .footerSecciones {
+    width: 100%;
+    margin: auto; }
+  .footerSecciones ul {
+    width: 100%;
+    margin: auto; }
+  .footerMediosDePago {
+    width: 100%;
+    margin: auto; }
+  .footerMediosDePago ul {
+    width: 100%;
+    margin: auto; }
+  .iconsContacto {
+    display: none; }
+  /*--------------menu-responsive----------------------------*/
+  .navContainerContacto {
+    width: 100%; }
+  .mainNavContacto {
+    width: 100%; }
+  .menuContainerContacto ul {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 42px;
+    left: -100%;
+    background: rgba(85, 90, 87, 0.85);
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 20px; }
+  .menuContainerContacto ul li {
+    display: block; }
+  .menuContainerContacto ul li a {
+    margin-right: 35px;
+    text-transform: capitalize; }
+  .menuContainerContacto ul li a:hover {
+    margin-right: 35px;
+    text-transform: capitalize;
+    color: rgba(85, 90, 87, 0.6); }
+  #check:checked ~ ul {
+    left: 60px; }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  INDEX                                          */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorMain {
+    width: 100%; }
+  .contenedorMain h1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 50px; }
+  .contenedorMain p {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 80px;
+    margin-bottom: 0px; }
+  /*--------------BENEFICIOS----------------------------*/
+  .contenedorSuscripcion {
+    width: 90%;
+    height: 1000px;
+    margin: auto; }
+  .listaBeneficios {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; }
+  .beneficioDescuentos {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px; }
+  .beneficioMensajes {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px; }
+  .beneficioEnvios {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 15px; }
+  /*--------------TESTIMONIOS----------------------------*/
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center; }
+  .tituloTestimonios {
+    font-size: 20px;
+    padding: 30px; }
+  .card-body {
+    text-align: center; }
+    .card-body h3 {
+      font-size: 30px; }
+  /*--------------BANNER----------------------------*/
+  .contenedorBanner {
+    margin-top: 70px;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .textoBanner {
+    padding: 10px; }
+    .textoBanner p {
+      margin-top: 80px; }
+  .botonSuscripcion {
+    transform: translateX(60px);
+    padding-left: 11px;
+    width: 150px;
+    border-radius: 7px;
+    background: linear-gradient(0deg, #00a635 0%, #00e486 100%);
+    margin-top: 0px; }
+    .botonSuscripcion a {
+      color: white; }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  PRODUCTOS                                      */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorBienvenida {
+    padding: 15px; }
+  .contenedorBienvenida p {
+    font-size: 20px;
+    line-height: 30px; }
+  .galeria {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .galeria div {
+    width: 90%;
+    height: 90%;
+    margin: auto; }
+  .banner2 {
+    font-size: 15px;
+    padding: 30px;
+    margin-bottom: 50px; }
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline; }
+  .contenedor-envios--general, .contenedor-devoluciones--general, .contenedor-pago--general {
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px; }
+  .contenedor-envios--general p, .contenedor-devoluciones--general p, .contenedor-pago--general p {
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px; }
+  .contenedor-devoluciones--general {
+    height: 420px; }
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px; }
+  .contenedor-pago--general p {
+    padding: 0 30px; }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  recursos                                        */
+  /*----------------------------------------------------------------------------------*/
+  .titulo-pagina--tamaño {
+    padding: 55px; }
+  .receta-uno--tamaño {
+    height: 2500px;
+    width: 100%;
+    margin: auto; }
+  .receta-uno__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px; }
+  .receta-uno__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column; }
+  .receta-uno__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px; }
+  .receta-uno__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px; }
+  .receta-uno__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px; }
+  .primer-articulo__parrafo {
+    font-size: 19px; }
+  /*-------------------RECETA 2------------------------------------------*/
+  .separador h2 {
+    font-size: 40px;
+    transform: translateY(-30px); }
+  .receta-dos--tamaño {
+    height: 1450px;
+    width: 100%;
+    margin: auto; }
+  .receta-dos__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px; }
+  .receta-dos__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+    margin-top: 45px; }
+  .receta-dos__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px; }
+  .receta-dos__contenedor-parrafo--tamaño h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px; }
+  .receta-dos__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px; }
+  .segundo-articulo__parrafo {
+    font-size: 19px; }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  nosotros                                        */
+  /*----------------------------------------------------------------------------------*/
+  .primer-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px; }
+  .primer-articulo--arriba {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .primer-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 40%;
+    padding: 20px; }
+  .primer-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(200px); }
+  /*-------segundo articulo-----*/
+  .segundo-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px; }
+  .segundo-articulo--abajo {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .segundo-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 50%;
+    padding: 20px; }
+  .segundo-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(240px); }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  CONTACTO                                       */
+  /*---------------------------------------------------------------------------------*/
+  .containerCarousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center; }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    font-size: 20px; }
+  .carousel-caption {
+    background: rgba(0, 166, 53, 0.425); } }
+
+/*---------------------------------------------------------------------------------*/
+/*                                  Media query 360px                              */
+/*---------------------------------------------------------------------------------*/
+@media (max-width: 360px) {
+  /*----------productos------------*/
+  .contenedorBienvenida {
+    padding: 15px; }
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline; }
+  .contenedor-envios--general, .contenedor-devoluciones--general, .contenedor-pago--general {
+    width: 100%;
+    height: 580px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px; }
+  .contenedor-devoluciones--general {
+    height: 420px; }
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px; }
+  .contenedor-pago--general p {
+    padding: 0 30px; }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  recursos                                       */
+  /*---------------------------------------------------------------------------------*/
+  .receta-uno--tamaño {
+    height: 1900px; } }

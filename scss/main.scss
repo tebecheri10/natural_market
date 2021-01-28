@@ -2,1095 +2,883 @@
 @import "devoluciones";
 @import "pago";
 
-
-
 * {
-
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
-
 
 /*------------- barra nav-------------*/
 
-header{
-
-    background: rgb(0,166,53);
-    background: linear-gradient(0deg, rgba(0,166,53,1) 0%, rgba(0,228,134,1) 100%);
-    width: 100%;
-    height: 60px;
-    align-items: center;
-    text-align: center;
-    position: fixed;
-    z-index: 1;
-    justify-content: space-around;
-    
+header {
+  background: rgb(0, 166, 53);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 166, 53, 1) 0%,
+    rgba(0, 228, 134, 1) 100%
+  );
+  width: 100%;
+  height: 61px;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  justify-content: space-around;
+  border-bottom: 1px solid pink;
 }
 
-
 .navContainerContacto {
-
-    background: rgb(0,166,53);
-    background: linear-gradient(0deg, rgba(0,166,53,1) 0%, rgba(0,228,134,1) 100%);
-    width: 100%;
-    height: 60px;
-    align-items: center;
-    border-bottom: 1px solid pink;
-    padding: 30px;
-    position: fixed;
-    font-weight: bold;
-    z-index: 2;
-
+  background: rgb(0, 166, 53);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 166, 53, 1) 0%,
+    rgba(0, 228, 134, 1) 100%
+  );
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  padding: 30px;
+  position: fixed;
+  font-weight: bold;
+  z-index: 2;
+  transform: translateX(-60px);
+  border-bottom: 1px solid pink;
 }
 
 .mainNavContacto {
-
-    display: flex;
-    justify-content: space-around;
-    font-size: 13px;
-    letter-spacing: 3px;
-    height: 100%;
-    align-items: center;
-   
-
+  display: flex;
+  justify-content: space-around;
+  font-size: 13px;
+  letter-spacing: 3px;
+  height: 100%;
+  align-items: center;
 }
 
 .mainNavContacto ul {
-
-    display: flex;
-    list-style: none;
-    margin-left: 0;
-    margin-top: 18px; 
-
+  display: flex;
+  list-style: none;
+  margin-left: 0;
+  margin-top: 18px;
 }
 
-.mainNavContacto ul li:hover{
-
-    text-shadow: 2px 2px 5px #000000 !important ;
-} 
-
-.mainNavContacto ul li:active{
-
-   transform:scale(1.04);
-} 
-
-.mainNavContacto ul li{
-
-    padding: 20px ;
- }
-
- 
-
- .logoContacto img {
-
-    
-    height: 50px;
-    width: 160px;
-    transform: translatex(-20px);
-    margin-bottom: 10px;
-    
-
-    
+.mainNavContacto ul li:hover {
+  text-shadow: 2px 2px 5px #000000 !important ;
 }
 
-.iconsContacto{
-    
-    color: white;
-    font-size: 40px;
-    transform: translateX(20px);
+.mainNavContacto ul li:active {
+  transform: scale(1.04);
+}
 
+.mainNavContacto ul li {
+  padding: 20px;
+}
+
+.logoContacto img {
+  height: 42px;
+  width: 200px;
+  transform: translatex(30px);
+  margin-bottom: 8px;
+}
+
+.iconsContacto {
+  color: white;
+  font-size: 40px;
+  transform: translateX(20px);
 }
 .iconsContacto i {
-
-    padding: 2px;
-    
+  padding: 2px;
 }
 
 .iconsContacto a:hover {
-
-    color: white;
-    text-decoration: none;
-    
+  color: white;
+  text-decoration: none;
 }
 
 .mainNavContacto ul li a {
-    color:#fff;
-
+  color: #fff;
 }
-    
+
 .mainNavContacto ul li a:hover {
-    color: none;
-    text-decoration: none;
-
+  color: none;
+  text-decoration: none;
 }
 
-header a{
-
-    color: white;
-    text-decoration: none;
-    
-    
+header a {
+  color: white;
+  text-decoration: none;
 }
-
 
 a {
-
-    color: white;
-    text-decoration: none;
-    
+  color: white;
+  text-decoration: none;
 }
 
 .menuBtn {
-
-    position: absolute;
-    display: none;
-    top: 8px;
-    left: 10px;
-    z-index: 3;
-    font-size: 35px;
-    color:white;
+  position: absolute;
+  display: none;
+  top: 8px;
+  left: 10px;
+  z-index: 3;
+  font-size: 35px;
+  color: white;
 }
 
-.menuBtn i{
-
-   position: fixed;
-   margin-top: 5px;
-   cursor: pointer;
+.menuBtn i {
+  position: fixed;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 #check {
-    display: none;
+  display: none;
 }
-
-
 
 /*-----------------------------------------------principal---------------------------------*/
 
-.contenedorMain{
-
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/main4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color:  white;    padding: 50px;
-    text-align: center;
-    text-shadow: 2px 2px 5px #000000;
-    margin-top: 0;
-
+.contenedorMain {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000000;
+  margin-top: 0;
 }
 
-.contenedorMain h1{
-
-    line-height: 70px;
-    font-size: 70px;
-    margin-bottom: 30px;
-    
+.contenedorMain h1 {
+  line-height: 70px;
+  font-size: 70px;
+  margin-bottom: 30px;
 }
 .contenedorMain p {
-    
-    padding: 0px;
-    line-height: 70px;
-    font-size: 20px;
-
+  padding: 0px;
+  line-height: 70px;
+  font-size: 30px;
 }
-
 
 /*-------------Testimonios-------------*/
 
-.contenedorTestimonios{
-
-    margin-top: 100px;
-    margin-left: 80px;
-    align-items: center;
-    transform: translateY(30px);
-    
-
+.contenedorTestimonios {
+  margin-top: 100px;
+  margin-left: 80px;
+  align-items: center;
+  transform: translateY(30px);
 }
 
-.card-img-top{
-
-    border-radius: 10px;
+.card-img-top {
+  border-radius: 10px;
 }
 
-
-.tituloTestimonios{
-
-    width: 100%;
-    height: 100px;  
-    display: block;
-    padding: 35px;
-    margin-top: 20px;  
-    font-size: 30px;
-    text-align: center;
-    background-color: #a2cea7;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%232b7246' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    background-attachment: fixed;
+.tituloTestimonios {
+  width: 100%;
+  height: 100px;
+  display: block;
+  padding: 35px;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #a2cea7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%232b7246' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-attachment: fixed;
 }
-      
-    
 
 /*-------------------------------beneficios-------------------------------*/
 .contenedorSuscripcion h2 {
-
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 40px;
-    width: 100%;
-
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 100%;
 }
 
-.contenedorSuscripcion{
-
-width: 100%;
-height: 500px;
-
-
+.contenedorSuscripcion {
+  width: 100%;
+  height: 500px;
 }
 
 .listaBeneficios {
-
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 20px;
-    margin-top: 100px;
-    margin-bottom: 50px;
-
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
-
 
 .listaBeneficios i {
-
-    font-size: 60px;
-    margin-top: 20px;
-    
-
- }
- .listaBeneficios p {
-
-    margin-top: 30px;
-    text-transform: uppercase;
-   
-
- }
-
-.beneficioDescuentos{
-
-    text-align: center;
-    width: 200px;
-    box-shadow: -1px 2px 33px -4px rgba(0,0,0,0.75);
-    border-radius: 25px;
-    transition: all 0.3s;
-
-
+  font-size: 60px;
+  margin-top: 20px;
+}
+.listaBeneficios p {
+  margin-top: 30px;
+  text-transform: uppercase;
 }
 
-.beneficioDescuentos:hover{
-
-    transform:scale(1.1)
-}
-.beneficioMensajes{
-
-    text-align: center;
-    width: 200px;
-    box-shadow: -1px 2px 33px -4px rgba(0,0,0,0.75);
-    border-radius: 25px;
-    transition: all 0.3s;
+.beneficioDescuentos {
+  text-align: center;
+  width: 200px;
+  box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  transition: all 0.3s;
 }
 
-.beneficioMensajes:hover{
-
-    transform:scale(1.1)
+.beneficioDescuentos:hover {
+  transform: scale(1.1);
+}
+.beneficioMensajes {
+  text-align: center;
+  width: 200px;
+  box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  transition: all 0.3s;
 }
 
-.beneficioEnvios{
-
-     text-align: center;
-     width: 200px;
-     box-shadow: -1px 2px 33px -4px rgba(0,0,0,0.75);
-     border-radius: 25px;
-     transition: all 0.3s;
-    
+.beneficioMensajes:hover {
+  transform: scale(1.1);
 }
 
-.beneficioEnvios:hover{
+.beneficioEnvios {
+  text-align: center;
+  width: 200px;
+  box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  transition: all 0.3s;
+}
 
-    transform:scale(1.1)
-    }
+.beneficioEnvios:hover {
+  transform: scale(1.1);
+}
 /*-------------------------------banner-------------------------------*/
 
-
 .contenedorBanner {
-
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 100%;
-    height: 350px;
-    margin-top: 200px;
-    background-image: url(../images/banner2.jpg);
-    background-size: cover;
-    color: white;
-    text-shadow: -2px -2px 6px rgba(0,0,0,0.93);
-
-
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 100%;
+  height: 350px;
+  margin-top: 200px;
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  color: white;
+  text-shadow: -2px -2px 6px rgba(0, 0, 0, 0.93);
 }
 .contenedorBanner h2 {
-
-   
-    font-size: 40px;
-    height: 80px;
-
-    
+  font-size: 40px;
+  height: 80px;
 }
 .contenedorBanner p {
-
-    line-height: 40px;
-    font-size: 20px;
-    font-family: 'Mulish', sans-serif;
-
-    
+  line-height: 40px;
+  font-size: 20px;
+  font-family: "Mulish", sans-serif;
 }
 
-
-.botonSuscripcion{
-
-    height: 45px;
-    width: 200px;
-    padding:10px 0 ;
-    margin-top: 15px;
-    text-transform: uppercase;
-    display: inline-block;
-    background-color: rgb(4, 165, 55);
-    text-align: center;
-    line-height: 29px;
-    border-radius: 6px;
-    font-size: 10px;
-
+.botonSuscripcion {
+  height: 45px;
+  width: 200px;
+  padding: 10px 0;
+  margin-top: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: rgb(4, 165, 55);
+  text-align: center;
+  line-height: 29px;
+  border-radius: 6px;
+  font-size: 10px;
 }
 
-.botonSuscripcion a{
-
-    color: white;
-    line-height: 10px;
+.botonSuscripcion a {
+  color: white;
+  line-height: 10px;
 }
-
-
 
 .botonSuscripcion:active {
-
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .botonSuscripcion:hover {
-
-    background:rgb(30, 211, 87);
-    color: white;
+  background: rgb(30, 211, 87);
+  color: white;
 }
 /*---------------------------redes sociales-------------------------------------*/
 
 .redesSociales {
-
-
-    width: 100%;
-    height: 200px;
-    margin:auto;
-    color:black;
-    margin-top: 90px;
-   
-    
-    
-    
-    
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  color: black;
+  margin-top: 90px;
 }
 
-.iconosRedesSociales{
-        
-        display: block;       
-        align-content: center;
-        text-align: center;
-        
+.iconosRedesSociales {
+  display: block;
+  align-content: center;
+  text-align: center;
 }
 
 .iconosRedesSociales img {
-width: 60px;
-height: 60px;
-margin: 20px;
-    
+  width: 60px;
+  height: 60px;
+  margin: 20px;
 }
 
 .iconosRedesSociales p {
-
-    font-size: 30px;
-     text-shadow: none;
+  font-size: 30px;
+  text-shadow: none;
 }
 /*---------------------------footer-------------------------------------*/
 
 .footer {
-
-    margin-top: 50px;
-    width: 100%;
-    height: 350px;
-    background:#446949;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 200px;
-    padding: 40px;
-    font-size: 13px;
-    
-   
-    
+  margin-top: 50px;
+  width: 100%;
+  height: 350px;
+  background: #446949;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 200px;
+  padding: 40px;
+  font-size: 13px;
 }
 
-.footer ul{
-
-    width: 90%;
-    margin: auto;
-    list-style: none;
-    color: white;
-    
+.footer ul {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  color: white;
 }
 
 .footer ul li {
-    text-align: center;
-    width: 200px;
-    padding: 10px;
-    border-bottom: 1px solid white;
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  border-bottom: 1px solid white;
 }
 
 .footer ul li a {
- color: white;
- text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
-
 
 .footer ul li:hover {
-
-        color:#d1d1d1;
+  color: #d1d1d1;
 }
-.footer ul li a:hover{
-    color:#d1d1d1;
-
+.footer ul li a:hover {
+  color: #d1d1d1;
 }
-.footerMediosDePago ul li{
-
-    border:none;
+.footerMediosDePago ul li {
+  border: none;
 }
-
 
 .footerMediosDePago i {
-    font-size: 45px;
-    text-shadow: none;
+  font-size: 45px;
+  text-shadow: none;
 }
-
-
 
 /*---------------------------------------------------------------------------------*/
 /*                                  PRODUCTOS                                      */
 /*---------------------------------------------------------------------------------*/
 
-
-
-    
-
-.contenedorBienvenida{
-
-    margin-top: 60px ;
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    background-color: #97db8e;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
-    font-size: 30px;
-    color:white;
-    text-shadow: 2px 2px 5px #000000;
-    text-align: center;
-    line-height: 140px ;
-    font-family: 'Mulish', sans-serif;
-    padding: 40px;
-    background-attachment: fixed
-    ;
-
+.contenedorBienvenida {
+  margin-top: 60px;
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+  background-color: #97db8e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+  line-height: 140px;
+  font-family: "Mulish", sans-serif;
+  padding: 40px;
+  background-attachment: fixed;
 }
 
 .contenedorBienvenida p {
+  color: white;
 
-    color:white;
-  
-    text-align: center;
+  text-align: center;
 }
 
 .galeria {
-    
-    
-    height: 1fr;
-    width: 90%;
-    margin: 60px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-
-  
+  height: 1fr;
+  width: 90%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
-.galeria img{
-
-    border-radius: 7px;
-    width: 110px;
-    height: 100px;
-    margin-top: 20px;
+.galeria img {
+  border-radius: 7px;
+  width: 110px;
+  height: 100px;
+  margin-top: 20px;
 }
 
 .galeria div {
-    border-radius: 9px;
-    background-color: white;
-    width: 190px;
-    height: 300px;
-    text-align: center;
-    box-shadow: -1px 2px 20px -4px rgba(0,0,0,0.75);
-    font-size: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    
+  border-radius: 9px;
+  background-color: white;
+  width: 190px;
+  height: 300px;
+  text-align: center;
+  box-shadow: -1px 2px 20px -4px rgba(0, 0, 0, 0.75);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.galeria div:hover{
-
-    opacity: 0.9;
-    
+.galeria div:hover {
+  opacity: 0.9;
 }
 
-.galeria div h3{
-    margin-top: 10px;
-   text-transform: uppercase;
-   font-size: 15px;
-    font-weight: bold;
+.galeria div h3 {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
 }
 .galeria div button {
-
-height: 30px;
-width: 70px;
-padding:10px 0 ;
-margin-top: 2px;
-margin-bottom: 20px;
-text-transform: uppercase;
-display: inline-block;
-background-color: rgba(0,166,53,1);
-text-align: center;
-line-height: 10px;
-border-radius: 6px;
-font-size: 11px;
-border: none;
-color: white;
-
-
+  height: 30px;
+  width: 70px;
+  padding: 10px 0;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: rgba(0, 166, 53, 1);
+  text-align: center;
+  line-height: 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  border: none;
+  color: white;
 }
 
 .galeria div button:hover {
-
-background:rgb(30, 211, 87);
-cursor: pointer;
+  background: rgb(30, 211, 87);
+  cursor: pointer;
 }
 
 .galeria div button:active {
-    transform: scale(1.02);
-
+  transform: scale(1.02);
 }
 
 /*---------------------------banner2-------------------------------------*/
 
 .banner2 {
-
-    width: 100%;
-    height: 350px;
-    margin: 100px auto;
-    text-align: center;
-    background-color: #97db8e;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    color: white;
-    font-size: 30px;
-    padding: 85px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px #000000;
-    line-height: 45px;
-
- }
+  width: 100%;
+  height: 350px;
+  margin: 100px auto;
+  text-align: center;
+  background-color: #97db8e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  color: white;
+  font-size: 30px;
+  padding: 85px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #000000;
+  line-height: 45px;
+}
 /*---------------------------POLITICAS-------------------------------------*/
 
- .titulo-politicas{
-
-    width: 100%;
-    text-align: center;
-    text-decoration: underline;
+.titulo-politicas {
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
 }
 
-.contenedor-envios--general{
-    
-    margin-top: 70px;
+.contenedor-envios--general {
+  margin-top: 70px;
 }
 
 .contenedor-devoluciones--general {
-
-    height: 200px;
+  height: 200px;
 }
-
 
 /*----------------------------------------------------------------------------------*/
 /*                                  recursos                                        */
 /*----------------------------------------------------------------------------------*/
 
-.titulo-pagina--tamaño{
-
-    margin-top: 60px ;
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    background-color: #97db8e;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
-    font-size: 30px;
-    color:white;
-    text-shadow: 2px 2px 5px #000000;
-    text-align: center;
-    line-height: 140px ;
-    font-family: 'Mulish', sans-serif;
-    padding: 80px;
-    background-attachment: fixed;
-
+.titulo-pagina--tamaño {
+  margin-top: 60px;
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+  background-color: #97db8e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+  line-height: 140px;
+  font-family: "Mulish", sans-serif;
+  padding: 80px;
+  background-attachment: fixed;
 }
 
-.receta-uno--tamaño{
-
-
-height: 900px;
-width: 90%;
-margin: auto;
-
-
+.receta-uno--tamaño {
+  height: 900px;
+  width: 90%;
+  margin: auto;
 }
-.receta-uno__contenedor-titulo--posicion{
-
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    
+.receta-uno__contenedor-titulo--posicion {
+  width: 100%;
+  height: 80px;
+  text-align: center;
 }
 
 .receta-uno__titulo--posicion {
-
-    line-height: 40px;
-    font-size: 50px;
-    margin: 40px 0 40px 0;
+  line-height: 40px;
+  font-size: 50px;
+  margin: 40px 0 40px 0;
 }
 
 .receta-uno__contenedor-foto-ingredientes--tamaño {
-
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
 }
 
 .receta-uno__contenedor-foto--mitad {
-    margin: auto;
-    width: 40%;
-    height: 100%;
+  margin: auto;
+  width: 40%;
+  height: 100%;
 }
-.receta-uno__imagen--tamaño{
-
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
+.receta-uno__imagen--tamaño {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 .receta-uno__contededor-texto--tamaño {
-    margin: auto;
-    width: 40%;
-    height: 100%;
-    text-align: center;
-    padding: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: rgba(0, 166, 53, 0.2);
-    border-radius: 5px;
-    
+  margin: auto;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(0, 166, 53, 0.2);
+  border-radius: 5px;
 }
 
-.receta-uno__ul--style{
-
-list-style:none;
+.receta-uno__ul--style {
+  list-style: none;
 }
 .receta-uno__contenedor-parrafo--tamaño {
-    margin: auto;
-    width: 90%;
-    padding: 30px 0 40px 0;
-    font-size: 20px;
-    
-    
+  margin: auto;
+  width: 90%;
+  padding: 30px 0 40px 0;
+  font-size: 20px;
 }
-          /*---------------------------separador-------------------------------------*/
+/*---------------------------separador-------------------------------------*/
 
 .separador {
-
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    background-color: #97db8e;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
-    font-size: 30px;
-    color:white;
-    text-shadow: 2px 2px 5px #000000;
-    text-align: center;
-    font-family: 'Mulish', sans-serif;
-    padding: 80px;
-    background-attachment: fixed;
-
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+  background-color: #97db8e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%230dc500' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  padding: 80px;
+  background-attachment: fixed;
 }
 
-.separador h2{
-
-    font-size: 60px;
+.separador h2 {
+  font-size: 60px;
 }
-
 
 /*---------------------------receta 2-------------------------------------*/
 
-.receta-dos--tamaño{
+.receta-dos--tamaño {
+  height: 700px;
+  width: 90%;
+  margin: auto;
+}
+.receta-dos__contenedor-titulo--posicion {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
 
+.receta-dos__titulo--posicion {
+  line-height: 30px;
+  font-size: 50px;
+  margin: 40px 0 40px 0;
+}
 
-    height: 700px;
-    width: 90%;
-    margin: auto;
-    
-    
-    }
-    .receta-dos__contenedor-titulo--posicion{
-    
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        
-        
-    }
-    
-    .receta-dos__titulo--posicion {
-    
-        line-height: 30px;
-        font-size: 50px;
-        margin: 40px 0 40px 0;
-    }
-    
-    .receta-dos__contenedor-foto-ingredientes--tamaño {
-    
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .receta-dos__contenedor-foto--mitad {
-        margin: auto;
-        width: 40%;
-        height: 100%;
-    }
-    .receta-dos__imagen--tamaño{
-    
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-    }
-    .receta-dos__contededor-texto--tamaño {
-        margin: auto;
-        width: 40%;
-        height: 100%;
-        text-align: center;
-        padding: 80px;
-        font-weight: bold;
-        text-transform: uppercase;
-        background: rgba(0, 166, 53, 0.2);
-        border-radius: 5px;
-        
-    }
-    
-    .receta-dos__ul--style{
-    
-    list-style:none;
-    }
-    .receta-dos__contenedor-parrafo--tamaño {
-        margin: auto;
-        width: 90%;
-        padding: 30px 0 40px 0;
-        font-size: 20px;
-        
-        
-        
-    }
+.receta-dos__contenedor-foto-ingredientes--tamaño {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+}
 
+.receta-dos__contenedor-foto--mitad {
+  margin: auto;
+  width: 40%;
+  height: 100%;
+}
+.receta-dos__imagen--tamaño {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.receta-dos__contededor-texto--tamaño {
+  margin: auto;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  padding: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(0, 166, 53, 0.2);
+  border-radius: 5px;
+}
+
+.receta-dos__ul--style {
+  list-style: none;
+}
+.receta-dos__contenedor-parrafo--tamaño {
+  margin: auto;
+  width: 90%;
+  padding: 30px 0 40px 0;
+  font-size: 20px;
+}
 
 /*----------------------------------------------------------------------------------*/
 /*                                  contacto                                        */
 /*----------------------------------------------------------------------------------*/
 
-
-
 .tituloFormulario {
-        width: 100%;
-        height: 200px;
-        padding: 90px;
-        
+  width: 100%;
+  height: 200px;
+  padding: 90px;
 }
 
 .tituloFormulario h1 {
-        font-size: 30px;
-    }
+  font-size: 30px;
+}
 
 .mapaYDatos {
-
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .containerCards {
-
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 /*---------------------------carousel-------------------------------------*/
 
-
-
-
 .containerCarousel {
-    width: 500px;
-    height: 300px;
-    margin-top: 30px;
-    margin-bottom: 200px;
-    
+  width: 500px;
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 200px;
 }
 
 .carousel-caption {
-
-    background: rgba(0, 166, 53, 0.425);
+  background: rgba(0, 166, 53, 0.425);
 }
-
-
 
 /*----------------------------------------------------------------------------------*/
 /*                                  nosotros                                        */
 /*----------------------------------------------------------------------------------*/
 
-.primer-articulo--arriba{
-
-    transform: translatey(40px);
-    margin:auto;
-    width: 95%;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-
+.primer-articulo--arriba {
+  transform: translatey(40px);
+  margin: auto;
+  width: 95%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
 }
 
-.primer-articulo__contenedor-texto--mitad{
-
-    width: 50%;
-    height:100%;
-    padding: 100px
+.primer-articulo__contenedor-texto--mitad {
+  width: 50%;
+  height: 100%;
+  padding: 100px;
 }
 
-
-.primer-articulo__imagen--mitad{
-
-    width:50%;
-    height: 80%;
-    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
-    border-radius: 5px;
-
+.primer-articulo__imagen--mitad {
+  width: 50%;
+  height: 80%;
+  box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
 }
 /*-------segundo articulo-----*/
 
-.segundo-articulo--abajo{
-
-
-   margin: auto;
-    width: 95%;
-    height: 500px;
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: center;
-    align-items: center;
-    
+.segundo-articulo--abajo {
+  margin: auto;
+  width: 95%;
+  height: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  align-items: center;
 }
 
-.segundo-articulo__contenedor-texto--mitad{
-
-    width: 50%;
-    height:100%;
-    padding: 65px;
+.segundo-articulo__contenedor-texto--mitad {
+  width: 50%;
+  height: 100%;
+  padding: 65px;
 }
 
-
-.segundo-articulo__imagen--mitad{
-
-    width:50%;
-    height: 80%;
-    box-shadow: -1px 2px 33px -4px rgba(0,0,0,0.541);
-    border-radius: 5px;
-
+.segundo-articulo__imagen--mitad {
+  width: 50%;
+  height: 80%;
+  box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+  border-radius: 5px;
 }
-
-
 
 /*----------------------------------------------------------------------------------*/
-/*                                  media query                                     */
+/*                                  media query   max width 375px-                  */
 /*----------------------------------------------------------------------------------*/
 /*----------------general----------*/
 
-
-@media(max-width: 576px) {
-    
-
-header {
-
+@media (max-width: 375px) {
+  header {
     width: 100%;
-}
+  }
 
-
-#check {
+  #check {
     display: none;
-}
+  }
 
-.menuBtn {
-
+  .menuBtn {
     display: block;
-}
+    left: 68px;
+  }
 
-
-
-.logoContacto img {
-
-    
+  .logoContacto img {
     height: 45px;
-    width: 160px;
-    transform: translatex(10px);
+    width: 300px;
+    transform: translatex(100px);
     margin-bottom: 10px;
-    
+    margin-left: 120px;
+  }
 
-    
-}
-
-
-
-
-.footer {
-
+  .footer {
     margin-top: 50px;
     margin-bottom: 0;
     width: 100%;
     height: 1200px;
-    background:#446949;
+    background: #446949;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 400px 400px 400px;
     column-gap: 200px;
     padding: 40px;
     font-size: 13px;
- }
+  }
+  .footerContacto {
+    width: 90%;
+    margin: auto;
+  }
 
- .iconsContacto  {
-
-    display:none
-
- }
- 
- /*--------------menu-responsive----------------------------*/
-
- .navContainerContacto{
-
+  .footerContacto ul {
     width: 100%;
- }
+    margin: auto;
+  }
+  .footerSecciones {
+    width: 90%;
+    margin: auto;
+  }
 
- .mainNavContacto{
-
+  .footerSecciones ul {
     width: 100%;
- }
+    margin: auto;
+  }
 
- .menuContainerContacto ul {
+  .footerMediosDePago {
+    width: 90%;
+    margin: auto;
+  }
 
-    
+  .footerMediosDePago ul {
+    width: 100%;
+    margin: auto;
+  }
+  .iconsContacto {
+    display: none;
+  }
+
+  /*--------------menu-responsive----------------------------*/
+
+  .navContainerContacto {
+    width: 100%;
+  }
+
+  .mainNavContacto {
+    width: 100%;
+  }
+
+  .menuContainerContacto ul {
     display: block;
     width: 100%;
     height: 100vh;
     position: fixed;
-    top:42px;
-    left: -100%;    
+    top: 42px;
+    left: -100%;
     background: rgba(85, 90, 87, 0.85);
     text-align: center;
     align-items: center;
     transition: all 0.5s;
     font-size: 20px;
+  }
 
-
- }  
-
- .menuContainerContacto ul li{
-
+  .menuContainerContacto ul li {
     display: block;
- }
+  }
 
- 
- .menuContainerContacto ul li a {
+  .menuContainerContacto ul li a {
+    margin-right: 35px;
+    text-transform: capitalize;
+  }
 
-   margin-right: 35px;
-   text-transform: capitalize;
-  
- }  
-
-
-
-
-
-.menuContainerContacto ul li a:hover {
-
+  .menuContainerContacto ul li a:hover {
     margin-right: 35px;
     text-transform: capitalize;
     color: rgba(85, 90, 87, 0.6);
+  }
 
+  #check:checked ~ ul {
+    left: 0;
+  }
 
-}
+  /*---------------------------------------------------------------------------------*/
+  /*                                  INDEX                                          */
+  /*---------------------------------------------------------------------------------*/
+  /*--------------BENEFICIOS----------------------------*/
 
-#check:checked ~  ul {
-  left: 0;
-}
-
-
-/*---------------------------------------------------------------------------------*/
-/*                                  INDEX                                          */
-/*---------------------------------------------------------------------------------*/
- /*--------------BENEFICIOS----------------------------*/
-
- .contenedorSuscripcion{
-
+  .contenedorSuscripcion {
     width: 90%;
     height: 1000px;
     margin: auto;
- }
+  }
 
- .listaBeneficios {
+  .listaBeneficios {
     width: 100%;
     height: 750px;
     display: flex;
@@ -1098,123 +886,113 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    
- }
-.beneficioDescuentos{
-    height: 200px;    
+  }
+  .beneficioDescuentos {
+    height: 200px;
     width: 90%;
     margin: auto;
     padding: 10px;
-}
+  }
 
-.beneficioMensajes{
-    height: 200px;    
+  .beneficioMensajes {
+    height: 200px;
     width: 90%;
     margin: auto;
     padding: 10px;
-
-}
-.beneficioEnvios{
-
-    height: 200px;    
+  }
+  .beneficioEnvios {
+    height: 200px;
     width: 90%;
     margin: auto;
     padding: 15px;
-
-
-}
+  }
 
   /*--------------TESTIMONIOS----------------------------*/
-
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
 
   .tituloTestimonios {
-
     font-size: 30px;
     padding: 20px;
-}
+  }
 
-.card-body {
-
+  .card-body {
     text-align: center;
 
-    h3{
-       font-size: 30px;
+    h3 {
+      font-size: 30px;
     }
-}
+  }
 
   /*--------------BANNER----------------------------*/
 
-.contenedorBanner{
-
+  .contenedorBanner {
     margin-top: 70px;
     width: 100%;
     height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
-}
+  }
 
-.textoBanner{
+  .textoBanner {
     padding: 10px;
-    p{
-
-        margin-top: 40px;
+    p {
+      margin-top: 40px;
     }
-}
-.botonSuscripcion {
-
+  }
+  .botonSuscripcion {
     transform: translateX(85px);
     padding-left: 11px;
     width: 150px;
     border-radius: 7px;
-    background: linear-gradient(0deg, rgba(0,166,53,1) 0%, rgba(0,228,134,1) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 166, 53, 1) 0%,
+      rgba(0, 228, 134, 1) 100%
+    );
 
-        a{
-            color: white;
-        }
-  
-}
- 
+    a {
+      color: white;
+    }
+  }
 
-/*---------------------------------------------------------------------------------*/
-/*                                  PRODUCTOS                                      */
-/*---------------------------------------------------------------------------------*/
-.contenedorBienvenida p {
-        font-size: 20px;
-        line-height: 30px;
-}
+  /*---------------------------------------------------------------------------------*/
+  /*                                  PRODUCTOS                                      */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorBienvenida p {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-.galeria{
+  .galeria {
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-}
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 
-.galeria div{
-
+  .galeria div {
     width: 90%;
     height: 90%;
     margin: auto;
-}
+  }
 
-.banner2 {
-
+  .banner2 {
     font-size: 15px;
     padding: 30px;
     margin-bottom: 50px;
-  
-}
+  }
 
   /*--------------POLITICAS----------------------------*/
-.titulo-politicas{
-
+  .titulo-politicas {
     width: 100%;
     text-align: center;
     text-decoration: underline;
-}
-  
-  
+  }
+
   .contenedor-envios--general {
     width: 100%;
     height: 500px;
@@ -1223,70 +1001,56 @@ header {
     margin-top: 50px;
   }
 
-  .contenedor-devoluciones--general{
-
+  .contenedor-devoluciones--general {
     height: 320px;
   }
 
-  .contenedor-pago--general{
-
+  .contenedor-pago--general {
     height: 340px;
     padding: 10px;
   }
 
   .contenedor-pago--general p {
-
     padding: 0 30px;
   }
 
   /*----------------------------------------------------------------------------------*/
-/*                                  recursos                                        */
-/*----------------------------------------------------------------------------------*/
-.titulo-pagina--tamaño{
-
+  /*                                  recursos                                        */
+  /*----------------------------------------------------------------------------------*/
+  .titulo-pagina--tamaño {
     padding: 55px;
-}
-.receta-uno--tamaño{
-
-
+  }
+  .receta-uno--tamaño {
     height: 1850px;
     width: 100%;
     margin: auto;
-}
+  }
 
-.receta-uno__titulo--posicion{
-
-    margin: 30px 0 40px 0 ;
+  .receta-uno__titulo--posicion {
+    margin: 30px 0 40px 0;
     line-height: 50px;
+  }
 
-}
-
-
-.receta-uno__contenedor-foto-ingredientes--tamaño {
-
+  .receta-uno__contenedor-foto-ingredientes--tamaño {
     width: 100%;
     height: 800px;
     flex-direction: column;
-}
-.receta-uno__contenedor-foto--mitad {
-  
+  }
+  .receta-uno__contenedor-foto--mitad {
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
-}
-.receta-uno__contenedor-parrafo--tamaño h3{
-
-text-align: center;
-font-weight: bold;
-height: 40px;
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-color: black;
-text-decoration-thickness: 1px;
-
-
-}
-.receta-uno__contededor-texto--tamaño {
+  }
+  .receta-uno__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-uno__contededor-texto--tamaño {
     margin-top: 30px;
     width: 100%;
     height: 100%;
@@ -1296,67 +1060,50 @@ text-decoration-thickness: 1px;
     text-transform: uppercase;
     background: rgba(0, 166, 53, 0.2);
     border-radius: 5px;
+  }
 
-    
-}
-
-.primer-articulo__parrafo{
-
+  .primer-articulo__parrafo {
     font-size: 20px;
-}
+  }
 
-/*-------------------RECETA 2------------------------------------------*/
- 
+  /*-------------------RECETA 2------------------------------------------*/
 
-.separador h2{
-
+  .separador h2 {
     font-size: 40px;
     transform: translateY(-30px);
-    
-    
- }
+  }
 
-.receta-dos--tamaño{
-
-
+  .receta-dos--tamaño {
     height: 1300px;
     width: 100%;
     margin: auto;
-}
+  }
 
-.receta-dos__titulo--posicion{
-
-    margin: 30px 0 40px 0 ;
+  .receta-dos__titulo--posicion {
+    margin: 30px 0 40px 0;
     line-height: 50px;
+  }
 
-}
-
-
-.receta-dos__contenedor-foto-ingredientes--tamaño {
-
+  .receta-dos__contenedor-foto-ingredientes--tamaño {
     width: 100%;
     height: 800px;
     flex-direction: column;
-}
-.receta-dos__contenedor-foto--mitad {
-  
+  }
+  .receta-dos__contenedor-foto--mitad {
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
-}
-.receta-dos__contenedor-parrafo--tamaño h3{
-
-text-align: center;
-font-weight: bold;
-height: 40px;
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-color: black;
-text-decoration-thickness: 1px;
-
-
-}
-.receta-dos__contededor-texto--tamaño {
+  }
+  .receta-dos__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-dos__contededor-texto--tamaño {
     margin-top: 30px;
     width: 100%;
     height: 100%;
@@ -1366,131 +1113,1047 @@ text-decoration-thickness: 1px;
     text-transform: uppercase;
     background: rgba(0, 166, 53, 0.2);
     border-radius: 5px;
+  }
 
-    
-}
-
-.segundo-articulo__parrafo{
-
+  .segundo-articulo__parrafo {
     font-size: 20px;
-}
-/*----------------------------------------------------------------------------------*/
-/*                                  nosotros                                        */
-/*----------------------------------------------------------------------------------*/
-.primer-articulo__titulo{
-
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  nosotros                                        */
+  /*----------------------------------------------------------------------------------*/
+  .primer-articulo__titulo {
     text-decoration: underline 1px solid black;
     margin-bottom: 30px;
-}
+  }
 
-.primer-articulo--arriba{
-
-    
+  .primer-articulo--arriba {
     width: 100%;
     height: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-}
-.primer-articulo__contenedor-texto--mitad{
-
+  }
+  .primer-articulo__contenedor-texto--mitad {
     width: 100%;
-    height:40%;
+    height: 40%;
     padding: 20px;
-    
-}
+  }
 
-
-.primer-articulo__imagen--mitad{
-
-    width:100%;
+  .primer-articulo__imagen--mitad {
+    width: 100%;
     height: 30%;
     box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
     border-radius: 5px;
     transform: translateY(200px);
-
-}
-/*-------segundo articulo-----*/
-.segundo-articulo__titulo{
-
+  }
+  /*-------segundo articulo-----*/
+  .segundo-articulo__titulo {
     text-decoration: underline 1px solid black;
     margin-bottom: 30px;
-}
-.segundo-articulo--abajo{
-
-
+  }
+  .segundo-articulo--abajo {
     width: 100%;
     height: 1300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
-     
- }
- 
- .segundo-articulo__contenedor-texto--mitad{
- 
+  .segundo-articulo__contenedor-texto--mitad {
     width: 100%;
-    height:50%;
+    height: 50%;
     padding: 20px;
- }
- 
- 
- .segundo-articulo__imagen--mitad{
- 
-    width:100%;
+  }
+
+  .segundo-articulo__imagen--mitad {
+    width: 100%;
     height: 30%;
     box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
     border-radius: 5px;
     transform: translateY(240px);
+  }
 
- 
- }
+  /*---------------------------------------------------------------------------------*/
+  /*                                  CONTACTO                                       */
+  /*---------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-/*---------------------------------------------------------------------------------*/
-/*                                  CONTACTO                                       */
-/*---------------------------------------------------------------------------------*/
-
-.containerCarousel {
+  .containerCarousel {
     width: 100%;
     height: 100%;
     margin-top: 30px;
-    margin-bottom: 50px;    
-}
+    margin-bottom: 50px;
+  }
 
-.tituloFormulario h1 {
+  .tituloFormulario h1 {
     width: 100%;
     height: 60px;
     text-align: center;
-   
-     
-
-}
-.tituloFormulario h1 {
+  }
+  .tituloFormulario h1 {
     width: 100%;
     height: 60px;
-    display: inline-block;   
-     font-size: 20px;
-     
+    display: inline-block;
+    font-size: 20px;
+  }
 
-}
-
-.carousel-caption {
-
+  .carousel-caption {
     background: rgba(0, 166, 53, 0.425);
+  }
+}
+/*----------------------------------------------------------------------------------*/
+/*-----------------------media query iphone plus------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 414px) {
+  header {
+    width: 100%;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+    left: 68px;
+  }
+
+  .logoContacto img {
+    height: 45px;
+    width: 220px;
+    transform: translatex(10px);
+    margin-bottom: 10px;
+    margin-left: 108px;
+  }
+
+  .footer {
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 1200px;
+    background: #446949;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 400px 400px;
+    column-gap: 200px;
+    padding: 40px;
+    font-size: 13px;
+  }
+  .footerContacto {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footerSecciones {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footerMediosDePago {
+    width: 90%;
+    margin: auto;
+  }
+
+  .iconsContacto {
+    display: none;
+  }
+
+  /*--------------menu-responsive----------------------------*/
+
+  .navContainerContacto {
+    width: 100%;
+  }
+
+  .mainNavContacto {
+    width: 100%;
+  }
+
+  .menuContainerContacto ul {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 42px;
+    left: -100%;
+    background: rgba(85, 90, 87, 0.85);
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 20px;
+  }
+
+  .menuContainerContacto ul li {
+    display: block;
+  }
+
+  .menuContainerContacto ul li a {
+    margin-right: 35px;
+    text-transform: capitalize;
+  }
+
+  .menuContainerContacto ul li a:hover {
+    margin-right: 35px;
+    text-transform: capitalize;
+    color: rgba(85, 90, 87, 0.6);
+  }
+
+  #check:checked ~ ul {
+    left: 60px;
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  INDEX                                          */
+  /*---------------------------------------------------------------------------------*/
+  /*--------------BENEFICIOS----------------------------*/
+
+  .contenedorSuscripcion {
+    width: 90%;
+    height: 1000px;
+    margin: auto;
+  }
+
+  .listaBeneficios {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+  .beneficioDescuentos {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .beneficioMensajes {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+  .beneficioEnvios {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+  }
+
+  /*--------------TESTIMONIOS----------------------------*/
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+
+  .tituloTestimonios {
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .card-body {
+    text-align: center;
+
+    h3 {
+      font-size: 30px;
+    }
+  }
+
+  /*--------------BANNER----------------------------*/
+
+  .contenedorBanner {
+    margin-top: 70px;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .textoBanner {
+    padding: 10px;
+    p {
+      margin-top: 40px;
+    }
+  }
+  .botonSuscripcion {
+    transform: translateX(85px);
+    padding-left: 11px;
+    width: 150px;
+    border-radius: 7px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 166, 53, 1) 0%,
+      rgba(0, 228, 134, 1) 100%
+    );
+
+    a {
+      color: white;
+    }
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  PRODUCTOS                                      */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorBienvenida p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .galeria {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .galeria div {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+  }
+
+  .banner2 {
+    font-size: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .contenedor-envios--general {
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .contenedor-devoluciones--general {
+    height: 320px;
+  }
+
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px;
+  }
+
+  .contenedor-pago--general p {
+    padding: 0 30px;
+  }
+
+  /*----------------------------------------------------------------------------------*/
+  /*                                  recursos                                        */
+  /*----------------------------------------------------------------------------------*/
+  .titulo-pagina--tamaño {
+    padding: 55px;
+  }
+  .receta-uno--tamaño {
+    height: 1850px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .receta-uno__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px;
+  }
+
+  .receta-uno__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+  }
+  .receta-uno__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .receta-uno__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-uno__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px;
+  }
+
+  .primer-articulo__parrafo {
+    font-size: 20px;
+  }
+
+  /*-------------------RECETA 2------------------------------------------*/
+
+  .separador h2 {
+    font-size: 40px;
+    transform: translateY(-30px);
+  }
+
+  .receta-dos--tamaño {
+    height: 1300px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .receta-dos__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px;
+  }
+
+  .receta-dos__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+  }
+  .receta-dos__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .receta-dos__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-dos__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px;
+  }
+
+  .segundo-articulo__parrafo {
+    font-size: 20px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  nosotros                                        */
+  /*----------------------------------------------------------------------------------*/
+  .primer-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px;
+  }
+
+  .primer-articulo--arriba {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .primer-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+  }
+
+  .primer-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(200px);
+  }
+  /*-------segundo articulo-----*/
+  .segundo-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px;
+  }
+  .segundo-articulo--abajo {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .segundo-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+  }
+
+  .segundo-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(240px);
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  CONTACTO                                       */
+  /*---------------------------------------------------------------------------------*/
+
+  .containerCarousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+  }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 166, 53, 0.425);
+  }
 }
 
+/*----------------------------------------------------------------------------------*/
+/*                                  media query 320px                               */
+/*----------------------------------------------------------------------------------*/
+@media only screen and (max-width: 320px) {
+  header {
+    width: 100%;
+  }
 
+  #check {
+    display: none;
+  }
 
+  .menuBtn {
+    display: block;
+  }
+
+  .logoContacto img {
+    height: 45px;
+    width: 200px;
+    transform: translatex(30px);
+    margin-bottom: 10px;
+    margin-left: 60px;
+  }
+
+  .footer {
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 1200px;
+    background: #446949;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 400px 400px;
+    column-gap: 200px;
+    padding: 40px;
+    font-size: 13px;
+  }
+  .footerContacto {
+    width: 100%;
+    margin: auto;
+  }
+
+  .footerContacto ul {
+    width: 100%;
+    margin: auto;
+  }
+  .footerSecciones {
+    width: 100%;
+    margin: auto;
+  }
+  .footerSecciones ul {
+    width: 100%;
+    margin: auto;
+  }
+  .footerMediosDePago {
+    width: 100%;
+    margin: auto;
+  }
+
+  .footerMediosDePago ul {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iconsContacto {
+    display: none;
+  }
+
+  /*--------------menu-responsive----------------------------*/
+
+  .navContainerContacto {
+    width: 100%;
+  }
+
+  .mainNavContacto {
+    width: 100%;
+  }
+
+  .menuContainerContacto ul {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 42px;
+    left: -100%;
+    background: rgba(85, 90, 87, 0.85);
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 20px;
+  }
+
+  .menuContainerContacto ul li {
+    display: block;
+  }
+
+  .menuContainerContacto ul li a {
+    margin-right: 35px;
+    text-transform: capitalize;
+  }
+
+  .menuContainerContacto ul li a:hover {
+    margin-right: 35px;
+    text-transform: capitalize;
+    color: rgba(85, 90, 87, 0.6);
+  }
+
+  #check:checked ~ ul {
+    left: 60px;
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  INDEX                                          */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorMain {
+    width: 100%;
+  }
+
+  .contenedorMain h1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 50px;
+  }
+
+  .contenedorMain p {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 80px;
+    margin-bottom: 0px;
+  }
+
+  /*--------------BENEFICIOS----------------------------*/
+
+  .contenedorSuscripcion {
+    width: 90%;
+    height: 1000px;
+    margin: auto;
+  }
+
+  .listaBeneficios {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+  .beneficioDescuentos {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .beneficioMensajes {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+  .beneficioEnvios {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+  }
+
+  /*--------------TESTIMONIOS----------------------------*/
+  .contenedorTestimonios {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+
+  .tituloTestimonios {
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .card-body {
+    text-align: center;
+
+    h3 {
+      font-size: 30px;
+    }
+  }
+
+  /*--------------BANNER----------------------------*/
+
+  .contenedorBanner {
+    margin-top: 70px;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .textoBanner {
+    padding: 10px;
+    p {
+      margin-top: 80px;
+    }
+  }
+  .botonSuscripcion {
+    transform: translateX(60px);
+    padding-left: 11px;
+    width: 150px;
+    border-radius: 7px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 166, 53, 1) 0%,
+      rgba(0, 228, 134, 1) 100%
+    );
+    margin-top: 0px;
+    a {
+      color: white;
+    }
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  PRODUCTOS                                      */
+  /*---------------------------------------------------------------------------------*/
+  .contenedorBienvenida {
+    padding: 15px;
+  }
+
+  .contenedorBienvenida p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .galeria {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .galeria div {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+  }
+
+  .banner2 {
+    font-size: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .contenedor-envios--general {
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .contenedor-envios--general p {
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .contenedor-devoluciones--general {
+    height: 420px;
+  }
+
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px;
+  }
+
+  .contenedor-pago--general p {
+    padding: 0 30px;
+  }
+
+  /*----------------------------------------------------------------------------------*/
+  /*                                  recursos                                        */
+  /*----------------------------------------------------------------------------------*/
+  .titulo-pagina--tamaño {
+    padding: 55px;
+  }
+  .receta-uno--tamaño {
+    height: 2500px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .receta-uno__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px;
+  }
+
+  .receta-uno__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+  }
+  .receta-uno__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .receta-uno__contenedor-parrafo--tamaño h3 {
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-uno__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px;
+  }
+
+  .primer-articulo__parrafo {
+    font-size: 19px;
+  }
+
+  /*-------------------RECETA 2------------------------------------------*/
+
+  .separador h2 {
+    font-size: 40px;
+    transform: translateY(-30px);
+  }
+
+  .receta-dos--tamaño {
+    height: 1450px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .receta-dos__titulo--posicion {
+    margin: 30px 0 40px 0;
+    line-height: 50px;
+  }
+
+  .receta-dos__contenedor-foto-ingredientes--tamaño {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+    margin-top: 45px;
+  }
+  .receta-dos__contenedor-foto--mitad {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .receta-dos__contenedor-parrafo--tamaño h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+  }
+  .receta-dos__contededor-texto--tamaño {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 166, 53, 0.2);
+    border-radius: 5px;
+  }
+
+  .segundo-articulo__parrafo {
+    font-size: 19px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*                                  nosotros                                        */
+  /*----------------------------------------------------------------------------------*/
+  .primer-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px;
+  }
+
+  .primer-articulo--arriba {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .primer-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+  }
+
+  .primer-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(200px);
+  }
+  /*-------segundo articulo-----*/
+  .segundo-articulo__titulo {
+    text-decoration: underline 1px solid black;
+    margin-bottom: 30px;
+  }
+  .segundo-articulo--abajo {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .segundo-articulo__contenedor-texto--mitad {
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+  }
+
+  .segundo-articulo__imagen--mitad {
+    width: 100%;
+    height: 30%;
+    box-shadow: -1px 2px 33px -4px rgba(0, 0, 0, 0.541);
+    border-radius: 5px;
+    transform: translateY(240px);
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  CONTACTO                                       */
+  /*---------------------------------------------------------------------------------*/
+
+  .containerCarousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+  }
+  .tituloFormulario h1 {
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 166, 53, 0.425);
+  }
 }
 
+/*---------------------------------------------------------------------------------*/
+/*                                  Media query 360px                              */
+/*---------------------------------------------------------------------------------*/
 
+@media only screen and (max-width: 360px) {
+  /*----------productos------------*/
+  .contenedorBienvenida {
+    padding: 15px;
+  }
+
+  /*--------------POLITICAS----------------------------*/
+  .titulo-politicas {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .contenedor-envios--general {
+    width: 100%;
+    height: 580px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .contenedor-devoluciones--general {
+    height: 420px;
+  }
+
+  .contenedor-pago--general {
+    height: 340px;
+    padding: 10px;
+  }
+
+  .contenedor-pago--general p {
+    padding: 0 30px;
+  }
+
+  /*---------------------------------------------------------------------------------*/
+  /*                                  recursos                                       */
+  /*---------------------------------------------------------------------------------*/
+  .receta-uno--tamaño {
+    height: 1900px;
+  }
+}
