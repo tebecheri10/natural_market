@@ -19,7 +19,7 @@ header {
     rgba(0, 166, 53, 1) 0%,
     rgba(0, 228, 134, 1) 100%
   );
-  width: 100%;
+  width: 100vw;
   height: 61px;
   align-items: center;
   text-align: center;
@@ -36,7 +36,7 @@ header {
     rgba(0, 166, 53, 1) 0%,
     rgba(0, 228, 134, 1) 100%
   );
-  width: 100%;
+  width: 100vw;
   height: 60px;
   align-items: center;
   padding: 30px;
@@ -339,7 +339,7 @@ a {
 
 .footer {
   margin-top: 50px;
-  width: 100%;
+  width: 100vw;
   height: 350px;
   background: #446949;
   display: grid;
@@ -1201,7 +1201,7 @@ a {
   }
 }
 /*----------------------------------------------------------------------------------*/
-/*-----------------------media query iphone plus------------------------------------*/
+/*-----------------------media query  414 px iphone plus------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 414px) {
@@ -1455,7 +1455,7 @@ a {
     padding: 55px;
   }
   .receta-uno--tamaño {
-    height: 1850px;
+    height: 1900px;
     width: 100%;
     margin: auto;
   }
@@ -1474,6 +1474,12 @@ a {
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
+  }
+
+  .receta-uno__imagen--tamaño{
+    height: 320px;
+    width: 100%;
+
   }
   .receta-uno__contenedor-parrafo--tamaño h3 {
     text-align: center;
@@ -1522,6 +1528,12 @@ a {
     width: 100%;
     height: 800px;
     flex-direction: column;
+  }
+
+  .receta-dos__imagen--tamaño{ 
+
+    height: 320px;
+    width:100%;
   }
   .receta-dos__contenedor-foto--mitad {
     width: 100%;
